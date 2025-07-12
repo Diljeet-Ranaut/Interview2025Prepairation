@@ -18,12 +18,12 @@ import java.time.Duration;
 public class BaseTest {
     protected static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-    @BeforeSuite
+    @BeforeSuite(alwaysRun = true)
     public void initReport() {
         ExtentReportManager.initReport();
     }
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setup(Method method) throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
@@ -45,7 +45,7 @@ public class BaseTest {
         Thread.sleep(5000);
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void teardown(ITestResult result) {
         WebDriver wd = driver.get();
         String testName = result.getMethod().getMethodName();
