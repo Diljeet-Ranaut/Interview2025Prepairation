@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Automation Test" parallel="methods" thread-count="3">
+    <test name="Login Suite">
+        <classes>
+            <class name="test.data.implementation.tests.LoginTest" />
+        </classes>
+    </test>
+</suite>
