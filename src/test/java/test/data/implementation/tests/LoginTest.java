@@ -49,6 +49,6 @@ public class LoginTest extends BaseTest {
         getDriver().get("https://opensource-demo.orangehrmlive.com");
         ExtentReportManager.getTest().info("Opening website");
         Thread.sleep(2000);
-        Assert.fail("Forcing failure to trigger screenshot");
+      //  Assert.fail("Forcing failure to trigger screenshot");
     }
 }
