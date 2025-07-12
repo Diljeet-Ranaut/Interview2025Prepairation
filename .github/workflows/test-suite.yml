@@ -2,9 +2,9 @@ name: Run Selenium Tests Bro Diljeet
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
   workflow_dispatch:
 
 jobs:
