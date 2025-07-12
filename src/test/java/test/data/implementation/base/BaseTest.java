@@ -65,7 +65,7 @@ public class BaseTest {
         driver.remove();
     }
 
-    @AfterSuite
+    @AfterSuite(alwaysRun = true)
     public void flushReport() {
         ExtentReportManager.flushReport();
     }
