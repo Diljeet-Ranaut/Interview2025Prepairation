@@ -24,7 +24,6 @@ public class BaseTest {
     public void setup(Method method) throws InterruptedException {
  WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-
 // Use headless only in CI environments like GitHub Actions
 if (System.getenv("CI") != null) {
     options.addArguments("--headless=new"); // For Chrome 109+
@@ -36,7 +35,7 @@ if (System.getenv("CI") != null) {
 } else {
     // Optional for local use: you can use normal mode or profile
     // options.addArguments("user-data-dir=/your/custom/path"); ❌ NOT for CI
-}l̥
+}̥
        
          WebDriver wd = new ChromeDriver(options);
         wd.manage().window().maximize();
