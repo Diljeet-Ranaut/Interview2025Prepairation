@@ -31,13 +31,15 @@ if (System.getenv("CI") != null) {
     options.addArguments("--no-sandbox");
     options.addArguments("--disable-dev-shm-usage");
     options.addArguments("--window-size=1920,1080");
+    System.out.println("[INFO] CI Environment: " + System.getenv("CI"));
+
     // ❗ Do NOT use --user-data-dir or default profile
 } else {
     // Optional for local use: you can use normal mode or profile
     // options.addArguments("user-data-dir=/your/custom/path"); ❌ NOT for CI
 }̥
        
-         WebDriver wd = new ChromeDriver(options);
+        WebDriver wd = new ChromeDriver(options);
         wd.manage().window().maximize();
         wd.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.set(wd);
