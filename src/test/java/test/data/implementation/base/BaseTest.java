@@ -22,8 +22,23 @@ public class BaseTest {
 
     @BeforeMethod
     public void setup(Method method) throws InterruptedException {
-        WebDriverManager.chromedriver().setup();
-        WebDriver wd = new ChromeDriver();
+ WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+
+// Use headless only in CI environments like GitHub Actions
+if (System.getenv("CI") != null) {
+    options.addArguments("--headless=new"); // For Chrome 109+
+    options.addArguments("--disable-gpu");
+    options.addArguments("--no-sandbox");
+    options.addArguments("--disable-dev-shm-usage");
+    options.addArguments("--window-size=1920,1080");
+    // ❗ Do NOT use --user-data-dir or default profile
+} else {
+    // Optional for local use: you can use normal mode or profile
+    // options.addArguments("user-data-dir=/your/custom/path"); ❌ NOT for CI
+}l̥
+       
+         WebDriver wd = new ChromeDriver(options);
         wd.manage().window().maximize();
         wd.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.set(wd);
