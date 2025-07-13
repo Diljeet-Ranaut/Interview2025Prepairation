@@ -2,7 +2,9 @@
 <suite name="Automation Test" parallel="methods" thread-count="3">
     <test name="Login Suite">
         <classes>
-            <class name="test.data.implementation.tests.LoginTest" />
+            <class name="mobile.testing.seprateimplementation.AndroidLoginTest" />
+         <!--   <class name="test.data.implementation.tests.LoginTest" /> -->
+
         </classes>
     </test>
 </suite>
