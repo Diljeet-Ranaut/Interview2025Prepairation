@@ -6,7 +6,7 @@ import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CreateUserTest {
+public class CreateUserTest_Post {
     String requestBody = "{ \"name\": \"Daljeet\", \"job\": \"QA Lead\" }";
 
     @Test

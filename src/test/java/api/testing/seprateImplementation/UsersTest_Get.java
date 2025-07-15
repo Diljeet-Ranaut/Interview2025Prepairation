@@ -5,7 +5,7 @@ import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class GetUsersTest {
+public class UsersTest_Get {
     @Test
     public void testGetUsers() {
         Response response = RestAssured
