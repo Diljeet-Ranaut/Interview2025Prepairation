@@ -38,7 +38,7 @@ public class SeleniumPractise {
     }
 
     public void alertCheckAndDropdownCheck() {
-        Alert al = driver.switchTo().alert();
+    /*    Alert al = driver.switchTo().alert();
         al.accept();
         al.dismiss();
         al.getText();
@@ -48,7 +48,7 @@ public class SeleniumPractise {
         sl.selectByIndex(1);
         sl.selectByVisibleText("");
         sl.selectByValue("");
-        sl.selectByContainsVisibleText("");
+        sl.selectByContainsVisibleText("");*/
     }
 
     //  @Test(priority = 0)
