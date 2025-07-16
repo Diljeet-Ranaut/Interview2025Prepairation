@@ -15,7 +15,7 @@ public class SecureAPITest {
     @Test
     public void accessProtectedResource() {
         String token = TokenManager.getToken();
-        System.out.println(STR."My Token:\{token}");
+        System.out.println("My Token:"+token);
         Response response = RestAssured
                 .given()
                 .spec(RequestSpec.getRequestSpec())
